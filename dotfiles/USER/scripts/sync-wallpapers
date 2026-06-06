@@ -28,7 +28,7 @@ sync_pinterest() {
   if command -v vivaldi >/dev/null; then
     dl_args+=(--cookies-from-browser vivaldi)
   fi
-  gallery-dl "${dl_args[@]}" -D "$tmp" "$url"
+  gallery-dl "${dl_args[@]}" -D "$tmp" -f "${slug}-{id}.{extension}" "$url"
 
   rm -rf "$dest"
   mkdir -p "$DEST_BASE"

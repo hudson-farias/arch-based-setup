@@ -47,7 +47,7 @@ Um pacote por linha; linhas com `#` são ignoradas.
 O `setup-user.sh` cria `~/wallpapers/folders.txt` (template) na primeira instalação — arquivo local, não versionado.
 
 1. Edite `~/wallpapers/folders.txt` (Pinterest ou `local:/caminho`)
-2. Rode `sync-wallpapers` — baixa em `/tmp/wallpapers-sync`, substitui `~/.local/share/wallpapers/<slug>/`
+2. Rode `sync-wallpapers` — baixa em `/tmp/wallpapers-sync`, substitui `~/.local/share/wallpapers/<slug>/` (arquivos: `<slug>/<slug>-<pin-id>.<ext>`)
 3. Pins removidos somem após sync (pasta destino é trocada inteira)
 
 Depende de `gallery-dl` (AUR). Boards privados usam cookies do Vivaldi.
