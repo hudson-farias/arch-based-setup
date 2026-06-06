@@ -1,0 +1,8 @@
+**/.zsh_history
+
+# editor runtime (never version)
+**/globalStorage/
+**/History/
+**/workspaceStorage/
+**/*.vscdb
+**/*.vscdb-journal

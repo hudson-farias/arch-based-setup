@@ -1,0 +1,35 @@
+{
+    "vscord.app.privacyMode.enable": true,
+    "workbench.startupEditor": "none",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "workbench.colorTheme": "Tokyo Night",
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "ruff.lint.ignore": [
+        "F403",
+        "F405",
+        "E701"
+    ],
+    "pylint.args": [
+        "--disable=C0114",
+        "--disable=C0115",
+        "--disable=C0116",
+        "--disable=C0411",
+        "--disable=W0614",
+        "--disable=W0401",
+        "--disable=C0301",
+        "--disable=C0321",
+        "--disable=C0103"
+    ],
+    "git.openRepositoryInParentFolders": "never",
+    "python.createEnvironment.trigger": "off",
+    "explorer.confirmPasteNative": false,
+    "vscord.status.idle.check": false,
+    "vscord.status.idle.enabled": false,
+    "vscord.app.name": "VSCodium",
+    "workbench.panel.showLabels": false
+}

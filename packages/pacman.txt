@@ -1,0 +1,33 @@
+# base
+base-devel
+curl
+unzip
+zip
+htop
+
+# dev
+git
+cmake
+ninja
+tree
+xclip
+
+# databases / api
+dbeaver
+
+# shell
+starship
+
+# cloud / ai
+aws-cli
+ollama-rocm
+
+# gpu / rocm
+rocm-hip-sdk
+rocm-opencl-runtime
+radeontop
+clinfo
+
+# node via asdf — descomente se preferir pacman em vez de asdf
+# nodejs-lts-iron
+# npm

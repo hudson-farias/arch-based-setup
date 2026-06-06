@@ -1,0 +1,28 @@
+# dotfiles / shell
+stow
+nano
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
+
+# containers
+docker
+docker-compose
+
+# browsers / chat / media
+vivaldi
+discord
+vesktop
+spotify
+
+# dev / runtimes
+asdf-vm
+vscodium
+cursor-nightly-bin
+postman-bin
+bun-bin
+redis
+
+# misc
+neofetch

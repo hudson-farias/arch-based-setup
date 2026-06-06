@@ -1,0 +1,21 @@
+{
+    "workbench.startupEditor": "none",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "window.newWindowProfile": "Default",
+    "workbench.settings.applyToAllProfiles": [
+        "vscord.app.privacyMode.enable",
+        "vscord.status.idle.check",
+        "vscord.status.idle.enabled"
+    ],
+    "vscord.app.privacyMode.enable": true,
+    "explorer.confirmPasteNative": false,
+    "git.openRepositoryInParentFolders": "always",
+    "window.confirmSaveUntitledWorkspace": false,
+    "vscord.status.idle.check": false
+}

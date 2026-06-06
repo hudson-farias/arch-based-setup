@@ -1,0 +1,6 @@
+{
+    "window.autoDetectColorScheme": true,
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "vencord-user-companion.alwaysShowSidebar": true
+}

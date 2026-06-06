@@ -1,0 +1,9 @@
+{
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Dracula At Night",
+    "explorer.confirmDelete": false,
+    "vscord.app.name": "Visual Studio Code",
+    "vscord.status.idle.check": false,
+    "vscord.app.privacyMode.enable": true,
+    "vscord.status.idle.enabled": false
+}

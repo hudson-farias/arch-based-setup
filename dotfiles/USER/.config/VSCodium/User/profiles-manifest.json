@@ -1,0 +1,29 @@
+[
+  {
+    "location": "-133ec2bf",
+    "name": "Python",
+    "icon": "robot"
+  },
+  {
+    "location": "7a3873a",
+    "name": "ReactJS",
+    "icon": "code"
+  },
+  {
+    "location": "32a14acc",
+    "name": "PhP",
+    "icon": "globe"
+  },
+  {
+    "location": "39eca07b",
+    "name": "Svelt",
+    "icon": "code"
+  },
+  {
+    "location": "-2185e87f",
+    "name": "Csharp",
+    "useDefaultFlags": {
+      "extensions": true
+    }
+  }
+]
