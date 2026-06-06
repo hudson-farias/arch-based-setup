@@ -1,0 +1,22 @@
+# bootstrap (necessário antes do yay)
+base-devel
+
+# display manager
+sddm
+sddm-kcm
+
+# build / dev (sistema — /usr)
+git
+cmake
+ninja
+htop
+
+# containers
+docker
+
+# gpu / rocm
+rocm-hip-sdk
+rocm-opencl-runtime
+
+# cloud / ai (daemon)
+ollama-rocm

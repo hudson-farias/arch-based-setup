@@ -1,14 +1,9 @@
 # base
-base-devel
 curl
 unzip
 zip
-htop
 
 # dev
-git
-cmake
-ninja
 tree
 xclip
 
@@ -18,13 +13,10 @@ dbeaver
 # shell
 starship
 
-# cloud / ai
+# cloud
 aws-cli
-ollama-rocm
 
-# gpu / rocm
-rocm-hip-sdk
-rocm-opencl-runtime
+# gpu (monitoramento)
 radeontop
 clinfo
 

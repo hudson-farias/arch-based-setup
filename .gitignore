@@ -1,5 +1,10 @@
 **/.zsh_history
 
+# wallpapers (imagens baixadas + config local do usuário)
+**/.local/share/wallpapers/
+**/wallpapers/folders.txt
+**/wallpapers/*/
+
 # editor runtime (never version)
 **/globalStorage/
 **/History/

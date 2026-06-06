@@ -1,0 +1,17 @@
+# dotfiles (necessário antes do stow ROOT)
+stow
+
+# sddm theme — https://github.com/lll2yu/sddm-lain-wired-theme
+sddm-lain-wired-theme
+
+# shell (sistema — /usr/share/zsh)
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
+
+# containers
+docker-compose
+
+# databases (serviço system-wide)
+redis

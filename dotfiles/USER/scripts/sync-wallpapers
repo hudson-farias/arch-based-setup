@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+FOLDERS_FILE="${HOME}/wallpapers/folders.txt"
+DEST_BASE="${HOME}/.local/share/wallpapers"
+
+TMP_BASE="/tmp/wallpapers-sync"
+
+slug_from_line() {
+  local line=$1
+  if [[ "$line" == local:* ]]; then
+    basename "${line#local:}/"
+  else
+    basename "${line%/}"
+  fi
+}
+
+sync_pinterest() {
+  local url=$1 slug=$2
+  local tmp="${TMP_BASE}/${slug}"
+  local dest="${DEST_BASE}/${slug}"
+
+  rm -rf "$tmp"
+  mkdir -p "$tmp"
+
+  local -a dl_args=()
+  if command -v vivaldi >/dev/null; then
+    dl_args+=(--cookies-from-browser vivaldi)
+  fi
+  gallery-dl "${dl_args[@]}" -D "$tmp" "$url"
+
+  rm -rf "$dest"
+  mkdir -p "$DEST_BASE"
+  mv "$tmp" "$dest"
+  echo "[+] Pinterest → ${dest}"
+}
+
+sync_local() {
+  local src=$1 slug=$2
+  local tmp="${TMP_BASE}/${slug}"
+  local dest="${DEST_BASE}/${slug}"
+
+  if [ ! -d "$src" ]; then
+    echo "[!] Pasta local inexistente: ${src}" >&2
+    return 1
+  fi
+
+  rm -rf "$tmp"
+  mkdir -p "$tmp"
+  rsync -a "${src}/" "${tmp}/"
+
+  rm -rf "$dest"
+  mkdir -p "$DEST_BASE"
+  mv "$tmp" "$dest"
+  echo "[+] local → ${dest}"
+}
+
+if [ ! -f "$FOLDERS_FILE" ]; then
+  echo "[!] Arquivo não encontrado: ${FOLDERS_FILE}" >&2
+  exit 1
+fi
+
+if ! command -v gallery-dl >/dev/null; then
+  echo "[!] gallery-dl não instalado (packages/user/aur.txt)" >&2
+  exit 1
+fi
+
+rm -rf "$TMP_BASE"
+mkdir -p "$TMP_BASE" "$DEST_BASE"
+
+while IFS= read -r line || [ -n "$line" ]; do
+  line="${line%%#*}"
+  line="${line#"${line%%[![:space:]]*}"}"
+  line="${line%"${line##*[![:space:]]}"}"
+  [ -z "$line" ] && continue
+
+  slug="$(slug_from_line "$line")"
+
+  if [[ "$line" == local:* ]]; then
+    sync_local "${line#local:}" "$slug"
+  elif [[ "$line" == http://* || "$line" == https://* ]]; then
+    sync_pinterest "$line" "$slug"
+  else
+    echo "[!] Linha ignorada (formato desconhecido): ${line}" >&2
+  fi
+done < "$FOLDERS_FILE"
+
+rm -rf "$TMP_BASE"
+echo '[+] Sync de wallpapers concluído'

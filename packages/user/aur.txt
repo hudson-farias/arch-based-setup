@@ -1,14 +1,5 @@
-# dotfiles / shell
-stow
+# editor
 nano
-zsh
-zsh-autosuggestions
-zsh-completions
-zsh-syntax-highlighting
-
-# containers
-docker
-docker-compose
 
 # browsers / chat / media
 vivaldi
@@ -22,7 +13,9 @@ vscodium
 cursor-nightly-bin
 postman-bin
 bun-bin
-redis
+
+# wallpapers
+gallery-dl
 
 # misc
 neofetch
