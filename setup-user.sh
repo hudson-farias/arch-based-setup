@@ -16,21 +16,6 @@ cd dotfiles
 stow -t ~ USER --adopt
 cd "$SCRIPT_DIR"
 
-FOLDERS_FILE="$HOME/wallpapers/folders.txt"
-if [ ! -f "$FOLDERS_FILE" ]; then
-  echo '[+] Criando ~/wallpapers/folders.txt (template)...'
-  mkdir -p "$(dirname "$FOLDERS_FILE")"
-  cat > "$FOLDERS_FILE" << 'EOF'
-# Uma fonte por linha. Linhas com # são ignoradas.
-#
-# Pinterest (board público ou privado com login no Vivaldi):
-# https://www.pinterest.com/usuario/nome-do-board/
-#
-# Pasta local:
-# local:/caminho/absoluto/para/pasta
-EOF
-fi
-
 STORAGE="$HOME/.config/VSCodium/User/globalStorage/storage.json"
 if [ ! -f "$STORAGE" ]; then
   echo '[+] Merging VSCodium profiles manifest...'
